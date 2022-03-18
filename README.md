@@ -89,12 +89,11 @@ Hurray! You successfully made a contribution!
 
 <h1 align=center> Project Mainteners ❤️ </h1>
 <p align="center">
-  <a href="https://github.com/tkrupesh14"><img src="https://avatars.githubusercontent.com/u/72821604?v=4" width=150px height=150px /></a> 
+  <a href="https://github.com/tkrupesh14"><img src="https://avatars.githubusercontent.com/u/76093323?v=4" width=150px height=150px /></a> 
 	<p align="center">
   <a href="https://github.com/avnishbharadva"><img src="https://avatars.githubusercontent.com/u/72494779?v=4" width=150px height=150px /></a> 
 		
-   <p align="center">
-  <a href="https://github.com/neha030"><img src="https://avatars.githubusercontent.com/u/72595335?v=4" width=150px height=150px /></a> 
+  
     
 	
 <h1 align=center> OUR VALUABLE CONTRIBUTORS✨ </h1>
