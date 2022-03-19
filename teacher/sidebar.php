@@ -1,4 +1,4 @@
-<div class="flex felx-col">
+
         <div class="fixed top-0 left-0 h-screen w-16 m-0 inline-block align-top bg-gray-900 text-white shadow-lg">
                         <ul>
                             <!-- logo -->
@@ -34,4 +34,3 @@
                         </ul>
                         
             </div>
-    </div>
