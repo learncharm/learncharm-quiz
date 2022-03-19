@@ -24,7 +24,11 @@
         include './sidebar.php';
     ?>
     <div class="flex w-full bg-green-300 p-4">
-        <h1 class="text-xl text-green-800 font-semibold ml-14">Dashboard</h1>
+        <h1 class="text-2xl text-green-800 font-semibold ml-14">Dashboard</h1>
+        <a href="#" data-tooltip-target="tooltip-profile" data-tooltip-placement="bottom" class="flow-right bg-green-600 rounded p-3 text-white transition-all duration-200 ease-linear hover:bg-white hover:text-green-600" style="margin-left: 68rem;"><i class="fas fa-user"></i></a>
+        <span id="tooltip-profile" role="tooltip" class="inline-block absolute invisible py-2 px-3 z-10 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">My Profile
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </span>
     </div>
     <h1 class="text-2xl font-semibold ml-16 p-4">Namaste🙏, Krupesh.  <span id="lblGreetings"> Good Evening </span></h1>
 </div>
