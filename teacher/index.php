@@ -25,23 +25,41 @@
     ?>
     <div class="flex w-full bg-green-300 p-4">
         <h1 class="text-2xl text-green-800 font-semibold ml-14">Dashboard</h1>
-        <a href="#" data-tooltip-target="tooltip-profile" data-tooltip-placement="bottom" class="flow-right bg-green-600 rounded p-3 text-white transition-all duration-200 ease-linear hover:bg-white hover:text-green-600" style="margin-left: 68rem;"><i class="fas fa-user"></i></a>
+        <a href="#" data-tooltip-target="tooltip-profile" data-tooltip-placement="bottom" class="flow-right bg-green-600 rounded p-3 text-white transition-all duration-200 ease-linear hover:bg-white hover:text-green-600" style="margin-left: 68rem;" id="profileBtn"><i class="fas fa-user"></i></a>
         <span id="tooltip-profile" role="tooltip" class="inline-block absolute invisible py-2 px-3 z-10 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">My Profile
             <div class="tooltip-arrow" data-popper-arrow></div>
         </span>
     </div>
+   
     <h1 class="text-2xl font-semibold ml-16 p-4">Namaste🙏, Krupesh.  <span id="lblGreetings"> Good Evening </span></h1>
 </div>
 
+ <!-- profile modal -->
+ <div class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" id="my-profile">
+    <!--modal content-->
+    <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+        <i class="fas fa-close p-2 bg-green-300 rounded cursor-pointer" id="closeModal"></i>
+        <div class="mt-3 text-center">
+            <h1 class="text-green-600 font-bold text-2xl mb-4">My Profile</h1>
+                <a href="" class="px-4 py-2 bg-green-500 text-white text-base font-medium rounded-md w-full  shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300 cursor-pointer"> Edit Profile</a>
+
+                <a href="" class="px-4 py-2 bg-green-500 text-white text-base font-medium rounded-md w-full  shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300 cursor-pointer"> Logout</a>
+        </div>
+    </div>
+</div>
 <!-- javasript -->
     <!-- flowbite -->
     <script src="https://unpkg.com/flowbite@1.3.4/dist/flowbite.js"></script>
     <script>
     var myDate = new Date();
     var hrs = myDate.getHours();
-
     var greet;
 
+    let myProfileModal = document.getElementById("my-profile");
+    let profileBtn = document.getElementById("profileBtn");
+    let closeModal = document.getElementById("closeModal");
+   
+// greetings msgs
     if (hrs < 12)
         greet = 'Good Morning';
     else if (hrs >= 12 && hrs <= 17)
@@ -50,7 +68,21 @@
         greet = 'Good Evening';
 
     document.getElementById('lblGreetings').innerHTML =
-      greet 
+      greet ;
+   
+// myProfile modal
+profileBtn.onclick = function() {
+    myProfileModal.style.display = "block";
+}
+// We want the modal to close when the OK button is clicked
+closeModal.onclick = function() {
+    myProfileModal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == myProfileModal) {
+        myProfileModal.style.display = "none";
+    }
+}
 </script> 
 </body>
 </html>
