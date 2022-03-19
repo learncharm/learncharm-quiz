@@ -18,12 +18,35 @@
 <link rel="manifest" href="../images/favicon/site.webmanifest">
 </head>
 <body>
+<div class=" felx-col">
     <?php
+    
         include './sidebar.php';
     ?>
+    <div class="flex w-full bg-green-300 p-4">
+        <h1 class="text-xl text-green-800 font-semibold ml-14">Dashboard</h1>
+    </div>
+    <h1 class="text-2xl font-semibold ml-16 p-4">Namaste🙏, Krupesh.  <span id="lblGreetings"> Good Evening </span></h1>
+</div>
 
 <!-- javasript -->
     <!-- flowbite -->
     <script src="https://unpkg.com/flowbite@1.3.4/dist/flowbite.js"></script>
+    <script>
+    var myDate = new Date();
+    var hrs = myDate.getHours();
+
+    var greet;
+
+    if (hrs < 12)
+        greet = 'Good Morning';
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'Good Afternoon';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'Good Evening';
+
+    document.getElementById('lblGreetings').innerHTML =
+      greet 
+</script> 
 </body>
 </html>
